@@ -4,11 +4,12 @@ module.exports = function(config){
     basePath : '../',
 
     files : [
-      'public/bower_components/angular/angular.js',
-      'public/bower_components/angular-route/angular-route.js',
-      'public/bower_components/angular-mocks/angular-mocks.js',
-      'public/js/**/*.js',
-      'test/unit/**/*.js'
+      'client/bower_components/angular/angular.js',
+      'client/bower_components/angular-route/angular-route.js',
+      'client/bower_components/angular-mocks/angular-mocks.js',
+      'client/js/**/*.js',
+      'client/**/*.js',
+      'test/unit/client/**/*.js'
     ],
 
     autoWatch : true,
@@ -21,12 +22,21 @@ module.exports = function(config){
             'karma-chrome-launcher',
             'karma-firefox-launcher',
             'karma-jasmine',
-            'karma-junit-reporter'
+            'karma-junit-reporter',
+            'karma-html-reporter'
             ],
+    
+    reporters: ['progress', 'junit', 'html'],
 
     junitReporter : {
-      outputFile: 'test_out/unit.xml',
+      outputFile: 'test/test_report/client/unit.xml',
       suite: 'unit'
+    },
+
+    // the default configuration
+    htmlReporter: {
+      outputDir: 'test/test_report/client',
+      templatePath: __dirname+'/jasmine_template.html'
     }
 
   });
