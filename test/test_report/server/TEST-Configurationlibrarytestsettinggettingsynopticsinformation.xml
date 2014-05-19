@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-<testsuite name="Configuration library test: setting/getting synoptics information." errors="0" tests="1" failures="0" time="0.005" timestamp="2014-05-19T19:01:09">
-  <testcase classname="Configuration library test: setting/getting synoptics information." name="After setting synoptics info, getting sytnoptics should match with the setted information" time="0.003"></testcase>
+<testsuite name="Configuration library test: setting/getting synoptics information." errors="0" tests="1" failures="0" time="0.004" timestamp="2014-05-19T23:39:31">
+  <testcase classname="Configuration library test: setting/getting synoptics information." name="After setting synoptics info, getting sytnoptics should match with the setted information" time="0.002"></testcase>
 </testsuite>
 </testsuites>

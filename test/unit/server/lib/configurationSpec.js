@@ -6,11 +6,11 @@ var configuration = require(serverPath + '/lib/configuration');
 
 var configurationData = {
 
-  synopticsInformation: [
-    {synopticName: 'Pyxsat', sensibleDataListsNames: ['pyxsat']},
-    {synopticName: 'Observatory', sensibleDataListsNames: ['teslescopes', 'observatoryRoom']}
-  ],
-  sensibleDataListsInformation:[
+	synopticsInformation: [
+		{synopticName: 'Pyxsat', sensibleDataListsNames: ['pyxsat'], imagePath: ''},
+		{synopticName: 'Observatory', sensibleDataListsNames: ['teslescopes', 'observatoryRoom'], imagePath: ''}
+	],
+  	sensibleDataListsInformation:[
     {sensibleDataListName: 'pyxsat',
     propertiesList: [{propertyName: 'fuelEng_1_%', propertyValue: '100'},
     				 {propertyName: 'fuelEng_2_%', propertyValue: '100'},
@@ -51,7 +51,8 @@ describe('Configuration library test: setting/getting synoptics information.', f
 
 		for (var i=0; i<synopticsInfo.length; i++){
 			if (!((synopticsInfo[i].synopticName == configurationData.synopticsInformation[i].synopticName) &&
-				 (equalsArrayOfStrings(synopticsInfo[i].sensibleDataListsNames, configurationData.synopticsInformation[i].sensibleDataListsNames))))
+				  (synopticsInfo[i].imagePath == configurationData.synopticsInformation[i].imagePath) &&
+				  (equalsArrayOfStrings(synopticsInfo[i].sensibleDataListsNames, configurationData.synopticsInformation[i].sensibleDataListsNames))))
 				return false;
 		}
 		return true;
@@ -92,9 +93,11 @@ describe('Configuration library test: setting/getting sensible data lists inform
 	};
 
   	//Setting sensible data lists information information
-	configuration.setSensibleDataListsInformation(configurationData.synopticsInformation);
+	configuration.setSensibleDataListsInformation(configurationData.sensibleDataListsInformation);
 
   	it('After setting sensible data lists info, getting sensible data lists should match with the setted information', function() {
+  		console.log(JSON.stringify(configuration.getSensibleDataListsInformation()));
+  		console.log(JSON.stringify(configurationData.sensibleDataListsInformation));
 	  expect(matchesSensibleDataListsInfo(configuration.getSensibleDataListsInformation())).toBe(true);
 	})
 });

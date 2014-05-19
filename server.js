@@ -2,6 +2,7 @@
 var express  = require('express');
 var app      = express(); 								// create app w/ express
 var port  	 = process.env.PORT || 8080; 				// set the port
+var configuration = require('./server/lib/configuration');
 
 // configuration ===============================================================
 
@@ -14,6 +15,9 @@ app.configure(function() {
 
 // routes ======================================================================
 require('./server/routes.js')(app);
+
+// init app data
+configuration.init();
 
 // listen (start app with node server.js) ======================================
 app.listen(port);
