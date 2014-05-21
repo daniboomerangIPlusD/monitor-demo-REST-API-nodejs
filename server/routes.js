@@ -39,6 +39,12 @@ module.exports = function(app) {
 	});
 	app.get('/async', function(req, res) {
 		res.sendfile('./client/index-async.html'); // load the single view file
-											 // (angular will handle the page changes on the front-end)
+												   // (angular will handle the page changes on the front-end)
+	});
+
+
+
+	app.get('/user', function(req, res){
+  		res.send(200, { name: 'tobi' });
 	});
 };

@@ -96,8 +96,6 @@ describe('Configuration library test: setting/getting sensible data lists inform
 	configuration.setSensibleDataListsInformation(configurationData.sensibleDataListsInformation);
 
   	it('After setting sensible data lists info, getting sensible data lists should match with the setted information', function() {
-  		console.log(JSON.stringify(configuration.getSensibleDataListsInformation()));
-  		console.log(JSON.stringify(configurationData.sensibleDataListsInformation));
 	  expect(matchesSensibleDataListsInfo(configuration.getSensibleDataListsInformation())).toBe(true);
 	})
 });

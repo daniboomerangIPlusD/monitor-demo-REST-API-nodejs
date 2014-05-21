@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <testsuites>
-  <testsuite name="Chrome 34.0.1847 (Mac OS X 10.9.2)" package="unit" timestamp="2014-05-19T21:39:35" id="0" hostname="Daniels-MacBook-Pro.local" tests="5" errors="0" failures="0" time="0.073">
+  <testsuite name="Chrome 34.0.1847 (Mac OS X 10.9.2)" package="unit" timestamp="2014-05-21T13:29:45" id="0" hostname="Daniels-MacBook-Pro.local" tests="5" errors="0" failures="0" time="0.066">
     <properties>
       <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36"/>
     </properties>
-    <testcase name="should ...." time="0.044" classname="unit Chrome 34.0.1847 (Mac OS X 10.9.2).controllers"/>
-    <testcase name="should ...." time="0.005" classname="unit Chrome 34.0.1847 (Mac OS X 10.9.2).controllers"/>
-    <testcase name="should print current version" time="0.02" classname="unit Chrome 34.0.1847 (Mac OS X 10.9.2).directives app-version"/>
+    <testcase name="should ...." time="0.04" classname="unit Chrome 34.0.1847 (Mac OS X 10.9.2).controllers"/>
+    <testcase name="should ...." time="0.004" classname="unit Chrome 34.0.1847 (Mac OS X 10.9.2).controllers"/>
+    <testcase name="should print current version" time="0.018" classname="unit Chrome 34.0.1847 (Mac OS X 10.9.2).directives app-version"/>
     <testcase name="should replace VERSION" time="0.002" classname="unit Chrome 34.0.1847 (Mac OS X 10.9.2).filter interpolate"/>
     <testcase name="should return current version" time="0.002" classname="unit Chrome 34.0.1847 (Mac OS X 10.9.2).service version"/>
     <system-out><![CDATA[Chrome 34.0.1847 (Mac OS X 10.9.2) LOG: LOG
